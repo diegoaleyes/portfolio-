@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio profesional de Diego - Desarrollador Web Full Stack" />
+  <title>Portfolio | Diego</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Diego | Desarrollador Web</h1>
+    <button id="theme-toggle" aria-label="Cambiar tema">🌓</button>
+  </header>
+
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy Diego, desarrollador web enfocado en crear soluciones digitales para pequeñas empresas.
+      Experiencia en HTML, CSS, JavaScript, backend con Java, C#, SQL, y soluciones rápidas con Firebase y EmailJS.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Proyectos</h2>
+    <div class="project">
+      <h3>Web Pizzería</h3>
+      <p>Diseño responsive con HTML, CSS y Javascript.</p>
+      <a href="https://integrador-dun-eta.vercel.app/" target="_blank">Ver demo</a>
+    </div>
+    <div class="project">
+      <h3>Formulario de contacto dia/ noche</h3>
+      <p>Formulario funcional usando EmailJS.</p>
+      <a href="https://formulario-contacto-chi.vercel.app/">Ver </a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Java, C#, SQL, Oracle</li>
+      <li>Firebase, EmailJS</li>
+      <li>Diseño responsive</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contacto</h2>
+    <form id="contact-form">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo" required />
+      <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+      <p id="form-message"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Diego - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
