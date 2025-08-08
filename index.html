@@ -8,58 +8,84 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Diego | Desarrollador Web</h1>
-    <button id="theme-toggle" aria-label="Cambiar tema">🌓</button>
+  <header class="navbar">
+    <div class="logo">Diego<span>Dev</span></div>
+    <nav>
+      <a href="#about">Sobre mí</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#contact">Contacto</a>
+      
+
+      <button id="theme-toggle" aria-label="Cambiar tema">🌓</button>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <p>
-      Soy Diego, desarrollador web enfocado en crear soluciones digitales para pequeñas empresas.
-      Experiencia en HTML, CSS, JavaScript, backend con Java, C#, SQL, y soluciones rápidas con Firebase y EmailJS.
-    </p>
-  </section>
+  <section class="hero">
+  <h1>Hola, soy <span>Diego</span></h1>
+  <p>
+    Desarrollador Web en formación con <strong>15 años de experiencia asesorando PYMEs</strong>.  
+    Combino mi trayectoria en el sector bancario con el desarrollo web para crear soluciones digitales que impulsan negocios reales.
+  </p>
+  <a href="#projects" class="btn-gradient">Ver Proyectos</a>
+</section>
 
-  <section id="projects">
+<section id="about" class="section fade-in about-highlight">
+  <h2>Sobre mí</h2>
+  <p>
+    Con <strong>15 años asesorando PYMEs</strong> en el sector bancario, conozco de primera mano sus retos y oportunidades.  
+    Ahora aplico esa experiencia al <strong>desarrollo web</strong>, creando soluciones digitales que combinan funcionalidad, diseño y visión empresarial.
+  </p>
+</section>
+<section id="projects" class="section fade-in">
     <h2>Proyectos</h2>
-    <div class="project">
-      <h3>Web Pizzería</h3>
-      <p>Diseño responsive con HTML, CSS y Javascript.</p>
-      <a href="https://integrador-dun-eta.vercel.app/" target="_blank">Ver demo</a>
-    </div>
-    <div class="project">
-      <h3>Formulario de contacto dia/ noche</h3>
-      <p>Formulario funcional usando EmailJS.</p>
-      <a href="https://formulario-contacto-chi.vercel.app/">Ver </a>
+    <div class="cards">
+      <div class="card">
+        <h3>Agencia de Desarrollo Web</h3>
+        <p>Web responsive con secciones, blog y contacto funcional.</p>
+        <a href="https://www.nxdigital.es" target="_blank" class="btn-gradient">Ver Proyecto</a>
+      </div>
+      <div class="card">
+        <h3>CRM Agenda y Citas</h3>
+        <p>Gestión de clientes y citas online con diseño intuitivo.</p>
+        <a href="https://crm-nexo-digital.vercel.app/" target="_blank" class="btn-gradient">Ver Proyecto</a>
+      </div>
+      <div class="card">
+        <h3>Pizzería Dieci</h3>
+        <p>Menú interactivo y secciones dinámicas para una pizzería moderna.</p>
+        <a href="https://integrador-dun-eta.vercel.app/" target="_blank" class="btn-gradient">Ver Proyecto</a>
+      </div>
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="section fade-in">
     <h2>Habilidades</h2>
-    <ul>
+    <ul class="skills-list">
       <li>HTML, CSS, JavaScript</li>
       <li>Java, C#, SQL, Oracle</li>
       <li>Firebase, EmailJS</li>
-      <li>Diseño responsive</li>
+      <li>Diseño responsive y SEO</li>
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section fade-in">
     <h2>Contacto</h2>
     <form id="contact-form">
       <input type="text" name="nombre" placeholder="Tu nombre" required />
       <input type="email" name="email" placeholder="Tu correo" required />
       <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar mensaje</button>
+      <button type="submit" class="btn-gradient">Enviar mensaje</button>
       <p id="form-message"></p>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 Diego - Todos los derechos reservados.</p>
+    <p>© 2025 Diego - Desarrollador Web</p>
   </footer>
 
   <script src="script.js"></script>
+  <a href="https://wa.me/34600784169" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
 </body>
 </html>

@@ -7,21 +7,27 @@ const setTheme = (theme) => {
   localStorage.setItem('theme', theme);
 };
 
-// Inicializar tema
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  setTheme(savedTheme);
-} else {
-  setTheme(prefersDark ? 'dark' : 'light');
-}
+setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
 
-// Cambiar tema manual
 toggleBtn.addEventListener('click', () => {
   const isDark = document.body.classList.contains('dark');
   setTheme(isDark ? 'light' : 'dark');
 });
 
-// Formulario con EmailJS (reemplaza tus claves)
+// Animación al hacer scroll
+const sections = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+});
+sections.forEach(section => observer.observe(section));
+
+// EmailJS Form
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -29,7 +35,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     .then(() => {
       document.getElementById('form-message').textContent = 'Mensaje enviado correctamente ✅';
       this.reset();
-    }, (err) => {
+    })
+    .catch((err) => {
       document.getElementById('form-message').textContent = 'Error al enviar el mensaje ❌';
       console.error(err);
     });
